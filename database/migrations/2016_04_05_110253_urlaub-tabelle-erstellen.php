@@ -16,7 +16,7 @@ class UrlaubTabelleErstellen extends Migration
             $table->increments('id');
             $table->date('von');
             $table->date('bis');
-            $table->tinyint('anzahlTage');
+            $table->tinyinteger('anzahlTage');
             $table->timestamps();
         });
     }

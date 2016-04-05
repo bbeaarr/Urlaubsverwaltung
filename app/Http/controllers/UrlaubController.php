@@ -4,16 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Urlaub;
 use App\Http\Requests;
 
 class UrlaubController extends Controller
 {
   /**
-  *
+  * Alle Einträge anzeigen.
   */
   public function index()
   {
-    //
+    $urlaub = Urlaub::all();
+    return view('urlaub.index',compact('urlaub'));
   }
   /**
   * Neuer Eintrag erstellen.
@@ -32,7 +34,7 @@ class UrlaubController extends Controller
     //
   }
   /**
-  * Einträge anzeigen.
+  * einzelnen Eintrag anzeigen anzeigen.
   *
   */
   public function show($id)
@@ -64,5 +66,4 @@ class UrlaubController extends Controller
   {
     //
   }
-}
 }
