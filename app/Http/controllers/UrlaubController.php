@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request; -> Error Exception
+use Request;
 
 use App\Urlaub;
 use App\Http\Requests;
+
 
 class UrlaubController extends Controller
 {
@@ -17,29 +19,25 @@ class UrlaubController extends Controller
     $urlaub = Urlaub::all();
     return view('urlaub.index',compact('urlaub'));
   }
+
   /**
   * Neuer Eintrag erstellen.
   *
   */
   public function create()
   {
-    //
+    return view('urlaub.create');
   }
+
   /**
-  * Speicher einen neu erstellten Eintrag.
+  * Speicher einen neu erstellten Eintrag in der Datenbank.
   *
   */
   public function store()
   {
-    //
-  }
-  /**
-  * einzelnen Eintrag anzeigen anzeigen.
-  *
-  */
-  public function show($id)
-  {
-    //
+     $urlaub=Request::all();
+     Urlaub::create($urlaub);
+     return redirect('urlaub');
   }
 
   /**
@@ -50,14 +48,16 @@ class UrlaubController extends Controller
   {
     //
   }
+
   /**
-  * Eintrag updaten.
+  * Eintrag in Datenbank updaten.
   *
   */
   public function update($id)
   {
     //
   }
+
   /**
   * Eintrag löschen.
   *
