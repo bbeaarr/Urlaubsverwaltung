@@ -24,10 +24,10 @@ class UrlaubController extends Controller
   * Neuer Eintrag erstellen.
   *
   */
-  public function create()
+  /*public function create()
   {
     return view('urlaub.create');
-  }
+}*/
 
   /**
   * Speicher einen neu erstellten Eintrag in der Datenbank.

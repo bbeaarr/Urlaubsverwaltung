@@ -2,8 +2,29 @@
 
 @section('content')
 <h1>Urlaubsverwaltung</h1>
-<a href="{{url('/urlaub/create')}}" class="btn btn-success">Eintrag erstellen</a>
 <hr>
+<h3>Eintrag erstellen</h3>
+{!! Form::open(['class'=>'form-inline'],['url' => 'urlaub']) !!}
+<div class="form-group">
+    {!! Form::label('Von', 'Von:') !!}
+    {!! Form::input('date','von',null,['class'=>'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('Bis', 'Bis:') !!}
+    {!! Form::input('date','bis',null,['class'=>'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('Tage', 'Anzahl Tage:') !!}
+    {!! Form::input('number','anzahlTage',null,['class'=>'form-control']) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::submit('Eintrag erstellen', ['class' => 'btn btn-success form-control']) !!}
+</div>
+{!! Form::close() !!}
+<br>
 <table class="table table-striped table-bordered table-hover">
     <thead>
         <tr class="bg-info">
