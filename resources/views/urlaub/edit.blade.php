@@ -1,8 +1,8 @@
 @extends('template')
 
 @section('content')
-    <h1>Eintrag erstellen</h1>
-    {!! Form::open(['url' => 'urlaub']) !!}
+    <h1>Eintrag bearbeiten</h1>
+    {!! Form::model($urlaub,['method' => 'PATCH','route'=>['urlaub.update',$urlaub->id]]) !!}
     <div class="form-group">
         {!! Form::label('Von', 'Von:') !!}
         {!! Form::text('von',null,['class'=>'form-control']) !!}
@@ -19,7 +19,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::submit('Speichern', ['class' => 'btn btn-primary form-control']) !!}
+        {!! Form::submit('Änderungen speichern', ['class' => 'btn btn-primary']) !!}
     </div>
     {!! Form::close() !!}
 

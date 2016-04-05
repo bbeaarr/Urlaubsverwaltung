@@ -46,7 +46,8 @@ class UrlaubController extends Controller
   */
   public function edit($id)
   {
-    //
+    $urlaub=Urlaub::find($id);
+    return view('urlaub.edit',compact('urlaub'));
   }
 
   /**
@@ -55,7 +56,10 @@ class UrlaubController extends Controller
   */
   public function update($id)
   {
-    //
+    $urlaubUpdate=Request::all();
+    $urlaub=Urlaub::find($id);
+    $urlaub->update($urlaubUpdate);
+    return redirect('urlaub');
   }
 
   /**
