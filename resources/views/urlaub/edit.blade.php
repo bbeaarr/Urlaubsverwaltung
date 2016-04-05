@@ -5,17 +5,17 @@
     {!! Form::model($urlaub,['method' => 'PATCH','route'=>['urlaub.update',$urlaub->id]]) !!}
     <div class="form-group">
         {!! Form::label('Von', 'Von:') !!}
-        {!! Form::text('von',null,['class'=>'form-control']) !!}
+        {!! Form::input('date','von',null,['class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('Bis', 'Bis:') !!}
-        {!! Form::text('bis',null,['class'=>'form-control']) !!}
+        {!! Form::input('date','bis',null,['class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('Tage', 'Anzahl Tage:') !!}
-        {!! Form::text('anzahlTage',null,['class'=>'form-control']) !!}
+        {!! Form::input('number','anzahlTage',null,['class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">

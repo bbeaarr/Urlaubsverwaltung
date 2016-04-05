@@ -68,6 +68,7 @@ class UrlaubController extends Controller
   */
   public function destroy($id)
   {
-    //
+    Urlaub::find($id)->delete();
+    return redirect('urlaub');
   }
 }

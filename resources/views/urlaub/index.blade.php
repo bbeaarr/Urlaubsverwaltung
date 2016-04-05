@@ -7,7 +7,6 @@
 <table class="table table-striped table-bordered table-hover">
     <thead>
         <tr class="bg-info">
-            <th>ID</th>
             <th>Von</th>
             <th>Bis</th>
             <th>Anzahl Tage</th>
@@ -18,7 +17,6 @@
     <tbody>
         @foreach($urlaub as $urlb)
         <tr>
-            <td>{{ $urlb->id }}</td>
             <td>{{ $urlb->von }}</td>
             <td>{{ $urlb->bis }}</td>
             <td>{{ $urlb->anzahlTage }}</td>
