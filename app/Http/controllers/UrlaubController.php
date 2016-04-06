@@ -12,6 +12,17 @@ use App\Http\Requests;
 class UrlaubController extends Controller
 {
     /**
+     * Verhindert dass man auf /urlaub
+     * zugreift ohne eingeloggt zu sein.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
     * AJAX
     */
     public function getAllEntries() {

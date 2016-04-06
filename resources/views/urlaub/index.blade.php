@@ -1,7 +1,10 @@
 @extends('template')
 
 @section('content')
-<h1>Urlaubsverwaltung</h1>
+<div class="row">
+    <div class="col-md-10"><h1>Urlaubsverwaltung</h1></div>
+    <div class="col-md-2"><button type="button" class="btn btn-link"><a href="{{ url('/logout') }}">Logout</a></button></div>
+</div>
 <hr>
 <h3>Eintrag erstellen</h3>
 {!! Form::open(['class'=>'form-inline'],['url' => 'urlaub']) !!}

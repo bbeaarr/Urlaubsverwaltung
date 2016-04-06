@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::resource('urlaub','UrlaubController');
 
 Route::get('/getAllEntries','UrlaubController@getAllEntries');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
