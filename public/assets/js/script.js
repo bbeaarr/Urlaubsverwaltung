@@ -9,6 +9,6 @@ $( document ).ready(function() {
           var entry = data[i];
           tageCount += entry.anzahlTage;
       }
-      $('#rest').append('<h3>Tage Übrig: ' + (30 - tageCount) + ' von 30</h3>');
+      $('#rest').append(30 - tageCount);
     });
 });

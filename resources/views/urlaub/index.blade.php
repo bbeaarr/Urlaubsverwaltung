@@ -25,7 +25,10 @@
 </div>
 {!! Form::close() !!}
 <br>
-<div class="form-group" id="rest"></div>
+<div class="form-group">
+    <h4>30 Urlaubstage</h4>
+    <h4>Tage Übrig: <span id="rest"></span></h4>
+</div>
 <table class="table table-striped table-bordered table-hover">
     <thead>
         <tr class="bg-info">

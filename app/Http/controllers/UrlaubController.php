@@ -12,9 +12,8 @@ use App\Http\Requests;
 class UrlaubController extends Controller
 {
     /**
-    *AJAX
+    * AJAX
     */
-
     public function getAllEntries() {
         $urlaub=Urlaub::all();
         return $urlaub;
@@ -28,15 +27,6 @@ class UrlaubController extends Controller
     $urlaub = Urlaub::all();
     return view('urlaub.index',compact('urlaub'));
   }
-
-  /**
-  * Neuer Eintrag erstellen.
-  * 
-  */
-  /*public function create()
-  {
-    return view('urlaub.create');
-  }*/
 
   /**
   * Speicher einen neu erstellten Eintrag in der Datenbank.
