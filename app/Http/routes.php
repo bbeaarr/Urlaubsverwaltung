@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 
 Route::resource('urlaub','UrlaubController');
+
+Route::get('/getAllEntries','UrlaubController@getAllEntries');

@@ -11,6 +11,15 @@ use App\Http\Requests;
 
 class UrlaubController extends Controller
 {
+    /**
+    *AJAX
+    */
+
+    public function getAllEntries() {
+        $urlaub=Urlaub::all();
+        return $urlaub;
+    }
+
   /**
   * Alle Einträge anzeigen.
   */
@@ -22,12 +31,12 @@ class UrlaubController extends Controller
 
   /**
   * Neuer Eintrag erstellen.
-  *
+  * 
   */
   /*public function create()
   {
     return view('urlaub.create');
-}*/
+  }*/
 
   /**
   * Speicher einen neu erstellten Eintrag in der Datenbank.

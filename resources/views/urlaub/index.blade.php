@@ -25,6 +25,7 @@
 </div>
 {!! Form::close() !!}
 <br>
+<div class="form-group" id="rest"></div>
 <table class="table table-striped table-bordered table-hover">
     <thead>
         <tr class="bg-info">
@@ -51,4 +52,5 @@
         @endforeach
     </tbody>
 </table>
+
 @stop
