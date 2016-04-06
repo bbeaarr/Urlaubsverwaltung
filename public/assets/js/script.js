@@ -3,11 +3,10 @@ $( document ).ready(function() {
       method: 'GET',
       url: '/getAllEntries'
   }).done(function(data) {
-      console.log(data);
       var tageCount = 0;
       for (var i = 0; i < data.length; i++) {
           var entry = data[i];
-          tageCount += entry.anzahlTage;
+          tageCount += parseInt(entry.anzahlTage);
       }
       $('#rest').append(30 - tageCount);
     });
