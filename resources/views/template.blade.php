@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Urlaubsverwaltung</title>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-
+  <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
