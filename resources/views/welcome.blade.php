@@ -9,7 +9,7 @@
                 <div class="panel-heading">Willkommen</div>
 
                 <div class="panel-body">
-                    Bitte registrieren/loggen Sie sich ein.
+                    Simon Bort ON14 2016
                 </div>
             </div>
         </div>

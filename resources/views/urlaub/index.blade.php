@@ -1,10 +1,8 @@
-@extends('template')
+@extends('layouts.app')
 
 @section('content')
-<div class="row">
-    <div class="col-md-10"><h1>Urlaubsverwaltung</h1></div>
-    <div class="col-md-2"><a href="{{ url('/logout') }}">Logout</a></div>
-</div>
+
+<h1>Urlaubsverwaltung</h1>
 <hr>
 <h3>Eintrag erstellen</h3>
 {!! Form::open(['class'=>'form-inline'],['url' => 'urlaub']) !!}
